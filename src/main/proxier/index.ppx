@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="102" platform="Windows" product_id="0" product_minver="400">
+  <Options>
+    <Resolve>
+      <AutoModeDetection enabled="true"/>
+      <ViaProxy enabled="false"/>
+      <BlockNonATypes enabled="false"/>
+      <ExclusionList OnlyFromListMode="false">%ComputerName%; localhost; *.local</ExclusionList>
+      <DnsUdpMode>0</DnsUdpMode>
+    </Resolve>
+    <Encryption mode="basic"/>
+    <ConnectionLoopDetection enabled="true" resolve="true"/>
+    <Udp mode="mode_bypass"/>
+    <LeakPreventionMode enabled="false"/>
+    <ProcessOtherUsers enabled="false"/>
+    <ProcessServices enabled="false"/>
+    <HandleDirectConnections enabled="true"/>
+    <HttpProxiesSupport enabled="false"/>
+  </Options>
+  <ProxyList>
+    <Proxy id="100" type="SOCKS5">
+      <Authentication enabled="true">
+        <Password>AAAC5F8MuF8aMcNtrQBjx4vkhNgPGQUWCks6JHVrA1XLEZg=</Password>
+        <Username>thaica49-zone-resi-region-ca-session-123asd1234123-sessTime-2</Username>
+      </Authentication>
+      <Options>48</Options>
+      <Port>16666</Port>
+      <Address>pr.pyproxy.com</Address>
+    </Proxy>
+  </ProxyList>
+  <ChainList/>
+  <RuleList>
+    <Rule enabled="false">
+      <Action type="Direct"/>
+      <Targets>localhost; 127.0.0.1; %ComputerName%; ::1</Targets>
+      <Name>Localhost</Name>
+    </Rule>
+    <Rule enabled="true">
+      <Action type="Proxy">100</Action>
+      <Targets>*.textnow.com;</Targets>
+      <Name>tx</Name>
+    </Rule>
+    <Rule enabled="true">
+      <Action type="Direct"/>
+      <Name>Default</Name>
+    </Rule>
+  </RuleList>
+</ProxifierProfile>
